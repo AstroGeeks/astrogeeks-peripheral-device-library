@@ -77,7 +77,7 @@ class I2CDevice(object):
         :param register: The address of the register to write to.
         :param data: The data word (two bytes) to write.
         """
-        self.pi.i2c_write_byte_data(self.handle, register, data)
+        self.pi.i2c_write_word_data(self.handle, register, data)
         sleep(SLEEP_TIME)
 
     def read_i2c_block_data(self, register: int, count: int):
